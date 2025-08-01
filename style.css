@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #0b0c10 0%, #1a237e 100%);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 200%;
+  height: 200%;
+  z-index: 0;
+}
+
+
+.birthday-card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  max-width: 350px;
+  z-index: 1;
+  position:relative;
+}
+
+.person-img {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  display: block;
+  object-fit: contain;      /* Show full image, no cropping */
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 4px solid #ff6b81;
+  background: #fff;         /* Shows as border if image doesn't fill circle */
+}
+.lavender-bold {
+  color: #b57edc;
+  font-weight: bold;
+   text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     2px  1.5px 0 #000;
+}
+h1 {
+  color: #e74c3c;
+  font-size: 24px;
+}
+
+#wish {
+  color: #555;
+  margin: 20px 0;
+  min-height: 60px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #ff6b81;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:background 0.3s;
+}
+
+button:hover {
+  background: #ff4757;
+}
+.moon {
+  position: fixed;
+  top: 48px;
+  right: 48px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 60% 40%, #f5f5f5 0%, #625d5d 100%, #655f5f 100%);
+  box-shadow:
+    0 0 60px 20px #b0b0b088,
+    0 0 120px 48px #1a237e44,
+    inset 20px 10px 40px 0px #bbb,
+    inset -10px -20px 40px 0px #444;
+  z-index: 10;
+  overflow: hidden;
+  border: 2px solid #b0b0b0;
+  transition: box-shadow 0.3s;
+}
+.moon::after {
+  display: none;
+}
+
+.stars span {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.85;
+  box-shadow: 0 0 8px 2px #fff8, 0 0 16px 4px #fff2;
+}
+.outlined-text {
+  color: #fff;
+  -webkit-text-stroke: 2px #000;
+  text-stroke: 2px #000;
+  text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1.5px 0 #000;
+}
+.circle-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+}
+.circle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position:  0% 0%; /* Change these values until the face is exactly centered */
+  display: block;
+}
+
+
